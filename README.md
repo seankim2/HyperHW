@@ -29,8 +29,15 @@ Pod installation complete! There are 4 dependencies from the Podfile and 4 total
 $ open HyperHW.xcworkspace/
 ```
 
+## Requirements
+- Swift 4.2 or above
+- Depolyment target >= 10.0
+- Supporting Portrait / Landscape
+- Supporting universal app
+- Supporting iphone notch
+
 ## Using library
-[Alamofire](https://github.com/Alamofire/Alamofire)
-[ReachabilitySwift](https://github.com/ashleymills/Reachability.swift)
-[SDWebImage](https://github.com/SDWebImage/SDWebImage)
-[SwiftLint](https://github.com/realm/SwiftLint)
+- [Alamofire](https://github.com/Alamofire/Alamofire)
+- [ReachabilitySwift](https://github.com/ashleymills/Reachability.swift)
+- [SDWebImage](https://github.com/SDWebImage/SDWebImage)
+- [SwiftLint](https://github.com/realm/SwiftLint)
