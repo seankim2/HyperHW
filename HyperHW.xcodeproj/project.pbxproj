@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E4CD5C322B7ED42001C72AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4CD5C222B7ED42001C72AC /* AppDelegate.swift */; };
+		3E4CD5C522B7ED42001C72AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4CD5C422B7ED42001C72AC /* ViewController.swift */; };
+		3E4CD5C822B7ED42001C72AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4CD5C622B7ED42001C72AC /* Main.storyboard */; };
+		3E4CD5CA22B7ED44001C72AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E4CD5C922B7ED44001C72AC /* Assets.xcassets */; };
+		3E4CD5CD22B7ED44001C72AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4CD5CB22B7ED44001C72AC /* LaunchScreen.storyboard */; };
+		3E4CD5D822B7ED44001C72AC /* HyperHWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4CD5D722B7ED44001C72AC /* HyperHWTests.swift */; };
+		3E4CD5E322B7ED44001C72AC /* HyperHWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4CD5E222B7ED44001C72AC /* HyperHWUITests.swift */; };
+		3E4CD5F222B7F43F001C72AC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4CD5F122B7F43F001C72AC /* .swiftlint.yml */; };
+		3E4CD5F422B8F3B1001C72AC /* CommonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4CD5F322B8F3B1001C72AC /* CommonComponents.swift */; };
+		3E4CD5F622BA9E19001C72AC /* SlideShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4CD5F522BA9E19001C72AC /* SlideShowViewController.swift */; };
+		D2DFF6BF7583123C40EA2A45 /* Pods_HyperHW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4885ED3DB3F3A672FFE0715 /* Pods_HyperHW.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E4CD5D422B7ED44001C72AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E4CD5B722B7ED42001C72AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E4CD5BE22B7ED42001C72AC;
+			remoteInfo = HyperHW;
+		};
+		3E4CD5DF22B7ED44001C72AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E4CD5B722B7ED42001C72AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E4CD5BE22B7ED42001C72AC;
+			remoteInfo = HyperHW;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E4CD5BF22B7ED42001C72AC /* HyperHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyperHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4CD5C222B7ED42001C72AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E4CD5C422B7ED42001C72AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E4CD5C722B7ED42001C72AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E4CD5C922B7ED44001C72AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E4CD5CC22B7ED44001C72AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E4CD5CE22B7ED44001C72AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4CD5D322B7ED44001C72AC /* HyperHWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyperHWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4CD5D722B7ED44001C72AC /* HyperHWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperHWTests.swift; sourceTree = "<group>"; };
+		3E4CD5D922B7ED44001C72AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4CD5DE22B7ED44001C72AC /* HyperHWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyperHWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4CD5E222B7ED44001C72AC /* HyperHWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperHWUITests.swift; sourceTree = "<group>"; };
+		3E4CD5E422B7ED44001C72AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4CD5F122B7F43F001C72AC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		3E4CD5F322B8F3B1001C72AC /* CommonComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonComponents.swift; sourceTree = "<group>"; };
+		3E4CD5F522BA9E19001C72AC /* SlideShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideShowViewController.swift; sourceTree = "<group>"; };
+		55F10006123DFEC2A0793C2B /* Pods-HyperHW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperHW.release.xcconfig"; path = "Target Support Files/Pods-HyperHW/Pods-HyperHW.release.xcconfig"; sourceTree = "<group>"; };
+		96DE78C4C5AB4A511DE91786 /* Pods-HyperHW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperHW.debug.xcconfig"; path = "Target Support Files/Pods-HyperHW/Pods-HyperHW.debug.xcconfig"; sourceTree = "<group>"; };
+		D4885ED3DB3F3A672FFE0715 /* Pods_HyperHW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyperHW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E4CD5BC22B7ED42001C72AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DFF6BF7583123C40EA2A45 /* Pods_HyperHW.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4CD5D022B7ED44001C72AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4CD5DB22B7ED44001C72AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E4CD5B622B7ED42001C72AC = {
+			isa = PBXGroup;
+			children = (
+				3E4CD5F122B7F43F001C72AC /* .swiftlint.yml */,
+				3E4CD5C122B7ED42001C72AC /* HyperHW */,
+				3E4CD5D622B7ED44001C72AC /* HyperHWTests */,
+				3E4CD5E122B7ED44001C72AC /* HyperHWUITests */,
+				3E4CD5C022B7ED42001C72AC /* Products */,
+				DF5855376C488DA53C7479F4 /* Pods */,
+				FC3A95CE597A176BA27EF9B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3E4CD5C022B7ED42001C72AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E4CD5BF22B7ED42001C72AC /* HyperHW.app */,
+				3E4CD5D322B7ED44001C72AC /* HyperHWTests.xctest */,
+				3E4CD5DE22B7ED44001C72AC /* HyperHWUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E4CD5C122B7ED42001C72AC /* HyperHW */ = {
+			isa = PBXGroup;
+			children = (
+				3E4CD5C222B7ED42001C72AC /* AppDelegate.swift */,
+				3E4CD5C422B7ED42001C72AC /* ViewController.swift */,
+				3E4CD5F522BA9E19001C72AC /* SlideShowViewController.swift */,
+				3E4CD5F322B8F3B1001C72AC /* CommonComponents.swift */,
+				3E4CD5C622B7ED42001C72AC /* Main.storyboard */,
+				3E4CD5C922B7ED44001C72AC /* Assets.xcassets */,
+				3E4CD5CB22B7ED44001C72AC /* LaunchScreen.storyboard */,
+				3E4CD5CE22B7ED44001C72AC /* Info.plist */,
+			);
+			path = HyperHW;
+			sourceTree = "<group>";
+		};
+		3E4CD5D622B7ED44001C72AC /* HyperHWTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E4CD5D722B7ED44001C72AC /* HyperHWTests.swift */,
+				3E4CD5D922B7ED44001C72AC /* Info.plist */,
+			);
+			path = HyperHWTests;
+			sourceTree = "<group>";
+		};
+		3E4CD5E122B7ED44001C72AC /* HyperHWUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3E4CD5E222B7ED44001C72AC /* HyperHWUITests.swift */,
+				3E4CD5E422B7ED44001C72AC /* Info.plist */,
+			);
+			path = HyperHWUITests;
+			sourceTree = "<group>";
+		};
+		DF5855376C488DA53C7479F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96DE78C4C5AB4A511DE91786 /* Pods-HyperHW.debug.xcconfig */,
+				55F10006123DFEC2A0793C2B /* Pods-HyperHW.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC3A95CE597A176BA27EF9B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4885ED3DB3F3A672FFE0715 /* Pods_HyperHW.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E4CD5BE22B7ED42001C72AC /* HyperHW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E4CD5E722B7ED44001C72AC /* Build configuration list for PBXNativeTarget "HyperHW" */;
+			buildPhases = (
+				6AECB2F40C91F310FAB6D808 /* [CP] Check Pods Manifest.lock */,
+				3E4CD5BB22B7ED42001C72AC /* Sources */,
+				3E4CD5BC22B7ED42001C72AC /* Frameworks */,
+				3E4CD5BD22B7ED42001C72AC /* Resources */,
+				3E4CD5F022B7F139001C72AC /* ShellScript */,
+				27FC52710D9E0AB8F337D9F8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HyperHW;
+			productName = HyperHW;
+			productReference = 3E4CD5BF22B7ED42001C72AC /* HyperHW.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E4CD5D222B7ED44001C72AC /* HyperHWTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E4CD5EA22B7ED44001C72AC /* Build configuration list for PBXNativeTarget "HyperHWTests" */;
+			buildPhases = (
+				3E4CD5CF22B7ED44001C72AC /* Sources */,
+				3E4CD5D022B7ED44001C72AC /* Frameworks */,
+				3E4CD5D122B7ED44001C72AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E4CD5D522B7ED44001C72AC /* PBXTargetDependency */,
+			);
+			name = HyperHWTests;
+			productName = HyperHWTests;
+			productReference = 3E4CD5D322B7ED44001C72AC /* HyperHWTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3E4CD5DD22B7ED44001C72AC /* HyperHWUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E4CD5ED22B7ED44001C72AC /* Build configuration list for PBXNativeTarget "HyperHWUITests" */;
+			buildPhases = (
+				3E4CD5DA22B7ED44001C72AC /* Sources */,
+				3E4CD5DB22B7ED44001C72AC /* Frameworks */,
+				3E4CD5DC22B7ED44001C72AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E4CD5E022B7ED44001C72AC /* PBXTargetDependency */,
+			);
+			name = HyperHWUITests;
+			productName = HyperHWUITests;
+			productReference = 3E4CD5DE22B7ED44001C72AC /* HyperHWUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E4CD5B722B7ED42001C72AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = khkim2;
+				TargetAttributes = {
+					3E4CD5BE22B7ED42001C72AC = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					3E4CD5D222B7ED44001C72AC = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 3E4CD5BE22B7ED42001C72AC;
+					};
+					3E4CD5DD22B7ED44001C72AC = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 3E4CD5BE22B7ED42001C72AC;
+					};
+				};
+			};
+			buildConfigurationList = 3E4CD5BA22B7ED42001C72AC /* Build configuration list for PBXProject "HyperHW" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E4CD5B622B7ED42001C72AC;
+			productRefGroup = 3E4CD5C022B7ED42001C72AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E4CD5BE22B7ED42001C72AC /* HyperHW */,
+				3E4CD5D222B7ED44001C72AC /* HyperHWTests */,
+				3E4CD5DD22B7ED44001C72AC /* HyperHWUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E4CD5BD22B7ED42001C72AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4CD5F222B7F43F001C72AC /* .swiftlint.yml in Resources */,
+				3E4CD5CD22B7ED44001C72AC /* LaunchScreen.storyboard in Resources */,
+				3E4CD5CA22B7ED44001C72AC /* Assets.xcassets in Resources */,
+				3E4CD5C822B7ED42001C72AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4CD5D122B7ED44001C72AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4CD5DC22B7ED44001C72AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27FC52710D9E0AB8F337D9F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HyperHW/Pods-HyperHW-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HyperHW/Pods-HyperHW-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E4CD5F022B7F139001C72AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		6AECB2F40C91F310FAB6D808 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyperHW-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E4CD5BB22B7ED42001C72AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4CD5C522B7ED42001C72AC /* ViewController.swift in Sources */,
+				3E4CD5F622BA9E19001C72AC /* SlideShowViewController.swift in Sources */,
+				3E4CD5C322B7ED42001C72AC /* AppDelegate.swift in Sources */,
+				3E4CD5F422B8F3B1001C72AC /* CommonComponents.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4CD5CF22B7ED44001C72AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4CD5D822B7ED44001C72AC /* HyperHWTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4CD5DA22B7ED44001C72AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4CD5E322B7ED44001C72AC /* HyperHWUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E4CD5D522B7ED44001C72AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E4CD5BE22B7ED42001C72AC /* HyperHW */;
+			targetProxy = 3E4CD5D422B7ED44001C72AC /* PBXContainerItemProxy */;
+		};
+		3E4CD5E022B7ED44001C72AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E4CD5BE22B7ED42001C72AC /* HyperHW */;
+			targetProxy = 3E4CD5DF22B7ED44001C72AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E4CD5C622B7ED42001C72AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E4CD5C722B7ED42001C72AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E4CD5CB22B7ED44001C72AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E4CD5CC22B7ED44001C72AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E4CD5E522B7ED44001C72AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3E4CD5E622B7ED44001C72AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E4CD5E822B7ED44001C72AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96DE78C4C5AB4A511DE91786 /* Pods-HyperHW.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T9X5DG29UJ;
+				INFOPLIST_FILE = HyperHW/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alticast.HyperHW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E4CD5E922B7ED44001C72AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F10006123DFEC2A0793C2B /* Pods-HyperHW.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T9X5DG29UJ;
+				INFOPLIST_FILE = HyperHW/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alticast.HyperHW;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3E4CD5EB22B7ED44001C72AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XBM7R734UV;
+				INFOPLIST_FILE = HyperHWTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alticast.HyperHWTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HyperHW.app/HyperHW";
+			};
+			name = Debug;
+		};
+		3E4CD5EC22B7ED44001C72AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XBM7R734UV;
+				INFOPLIST_FILE = HyperHWTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alticast.HyperHWTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HyperHW.app/HyperHW";
+			};
+			name = Release;
+		};
+		3E4CD5EE22B7ED44001C72AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XBM7R734UV;
+				INFOPLIST_FILE = HyperHWUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alticast.HyperHWUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HyperHW;
+			};
+			name = Debug;
+		};
+		3E4CD5EF22B7ED44001C72AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XBM7R734UV;
+				INFOPLIST_FILE = HyperHWUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alticast.HyperHWUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HyperHW;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E4CD5BA22B7ED42001C72AC /* Build configuration list for PBXProject "HyperHW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E4CD5E522B7ED44001C72AC /* Debug */,
+				3E4CD5E622B7ED44001C72AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E4CD5E722B7ED44001C72AC /* Build configuration list for PBXNativeTarget "HyperHW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E4CD5E822B7ED44001C72AC /* Debug */,
+				3E4CD5E922B7ED44001C72AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E4CD5EA22B7ED44001C72AC /* Build configuration list for PBXNativeTarget "HyperHWTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E4CD5EB22B7ED44001C72AC /* Debug */,
+				3E4CD5EC22B7ED44001C72AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E4CD5ED22B7ED44001C72AC /* Build configuration list for PBXNativeTarget "HyperHWUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E4CD5EE22B7ED44001C72AC /* Debug */,
+				3E4CD5EF22B7ED44001C72AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E4CD5B722B7ED42001C72AC /* Project object */;
+}
