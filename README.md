@@ -1,4 +1,4 @@
-# HyperHW
+# HyperHW ![GitHub release](https://img.shields.io/badge/release-v1.0.0-blue.svg)
 [Flickr 공개피드](https://www.flickr.com/services/feeds/docs/photos_public/)의 이미지를 하나씩 보여주는 전자앨범
 
 ## How to download source code
@@ -28,3 +28,9 @@ Pod installation complete! There are 4 dependencies from the Podfile and 4 total
 ```bash
 $ open HyperHW.xcworkspace/
 ```
+
+## Using library
+[Alamofire](https://github.com/Alamofire/Alamofire)
+[ReachabilitySwift](https://github.com/ashleymills/Reachability.swift)
+[SDWebImage](https://github.com/SDWebImage/SDWebImage)
+[SwiftLint](https://github.com/realm/SwiftLint)
