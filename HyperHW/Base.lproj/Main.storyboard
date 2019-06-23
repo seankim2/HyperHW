@@ -107,7 +107,7 @@
                                     <action selector="processTimePeriodSlider:" destination="dfj-4c-tq7" eventType="valueChanged" id="1ai-kX-9iW"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv3-2r-dsu">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hv3-2r-dsu">
                                 <rect key="frame" x="334" y="989" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7D1-v5-gLr"/>
@@ -132,7 +132,6 @@
                             <constraint firstItem="ofH-nY-Hjm" firstAttribute="centerX" secondItem="YBw-kT-7bK" secondAttribute="centerX" id="GOa-aE-tKQ"/>
                             <constraint firstItem="BrZ-wN-pwD" firstAttribute="centerX" secondItem="E9l-AV-ENI" secondAttribute="trailing" constant="50" id="Rqn-CK-LEX"/>
                             <constraint firstItem="hv3-2r-dsu" firstAttribute="centerX" secondItem="YBw-kT-7bK" secondAttribute="centerX" id="ivY-s5-0Sy"/>
-                            <constraint firstItem="5jP-tN-IsM" firstAttribute="top" secondItem="hv3-2r-dsu" secondAttribute="bottom" constant="5" id="kNF-gk-L6m"/>
                             <constraint firstItem="ofH-nY-Hjm" firstAttribute="centerY" secondItem="YBw-kT-7bK" secondAttribute="centerY" id="n0k-Qs-afQ"/>
                             <constraint firstItem="E9l-AV-ENI" firstAttribute="centerX" secondItem="YBw-kT-7bK" secondAttribute="centerX" constant="-35" id="yP8-cX-wj3"/>
                             <constraint firstItem="BrZ-wN-pwD" firstAttribute="top" secondItem="sgg-ew-Ajt" secondAttribute="bottom" constant="5" id="za6-ey-8cP"/>

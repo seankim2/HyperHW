@@ -59,6 +59,7 @@ class SlideShowViewController: UIViewController {
             backBtn.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: 5).isActive = true
         } else {
             print("[\(#function)] don't have to consider notch")
+            backBtn.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -5).isActive = true
         }
     }
     
