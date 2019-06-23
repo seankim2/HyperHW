@@ -10,7 +10,6 @@
  Declare import framework
  ********************************************************************/
 import UIKit
-import Reachability
 
 /********************************************************************
  Declare Class
@@ -19,8 +18,6 @@ import Reachability
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    let reachability = Reachability()!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -37,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        stopNetCheckNoti()
+        CommonComponents.sharedInstance?.stopNetCheckNoti()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -47,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        startNetCheckNoti()
+        CommonComponents.sharedInstance?.startNetCheckNoti()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -57,38 +54,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?)
         -> UIInterfaceOrientationMask {
             return [.portrait, .portraitUpsideDown, .landscapeLeft, .landscapeRight]
-    }
-    
-    /********************************************************************
-     Check Network Connection
-     ********************************************************************/
-    func startNetCheckNoti() {
-        print("\(#function)")
-        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
-        do {
-            try reachability.startNotifier()
-        } catch {
-            print("could not start reachability notifier")
-        }
-    }
-    
-    func stopNetCheckNoti() {
-        print("\(#function)")
-        reachability.stopNotifier()
-        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
-    }
-
-    @objc func reachabilityChanged(note: Notification) {
-        if let reachability = note.object as? Reachability {
-            switch reachability.connection {
-            case .wifi:
-                print("Reachable via WiFi")
-            case .cellular:
-                print("Reachable via Cellular")
-            case .none:
-                print("Network not reachable")
-                CommonComponents.sharedInstance?.processPopup(title: "알림", message: "네트워크 연결을 확인해 주세요.")
-            }
-        }
-    }
+    }    
 }

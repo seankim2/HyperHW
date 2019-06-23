@@ -11,6 +11,7 @@
  ********************************************************************/
 import Foundation
 import UIKit
+import Reachability
 
 /********************************************************************
  UIColor extention
@@ -29,6 +30,7 @@ extension UIColor {
  Declare Class
  ********************************************************************/
 class CommonComponents {
+    let reachability = Reachability()!
     var activityIndicatorAlert: UIAlertController?
     var popupAlertController: UIAlertController?
     let titleColor: UIColor = UIColor.colorWithRGBHex(hex: 0xF75421)
@@ -66,4 +68,38 @@ class CommonComponents {
             }
         })
     }
+    
+    /********************************************************************
+     Check Network Connection
+     ********************************************************************/
+    func startNetCheckNoti() {
+        print("\(#function)")
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("could not start reachability notifier")
+        }
+    }
+    
+    func stopNetCheckNoti() {
+        print("\(#function)")
+        reachability.stopNotifier()
+        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
+    }
+    
+    @objc func reachabilityChanged(note: Notification) {
+        if let reachability = note.object as? Reachability {
+            switch reachability.connection {
+            case .wifi:
+                print("Reachable via WiFi")
+            case .cellular:
+                print("Reachable via Cellular")
+            case .none:
+                print("Network not reachable")
+                CommonComponents.sharedInstance?.processPopup(title: "알림", message: "네트워크 연결을 확인해 주세요.")
+            }
+        }
+    }
+
 }
