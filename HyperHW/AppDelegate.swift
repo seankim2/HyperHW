@@ -6,9 +6,15 @@
 //  Copyright © 2019 khkim2. All rights reserved.
 //
 
+/********************************************************************
+ Declare import framework
+ ********************************************************************/
 import UIKit
 import Reachability
 
+/********************************************************************
+ Declare Class
+ ********************************************************************/
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -53,6 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return [.portrait, .portraitUpsideDown, .landscapeLeft, .landscapeRight]
     }
     
+    /********************************************************************
+     Check Network Connection
+     ********************************************************************/
     func startNetCheckNoti() {
         print("\(#function)")
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
@@ -69,7 +78,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
     }
 
-    // Check Network Connection
     @objc func reachabilityChanged(note: Notification) {
         if let reachability = note.object as? Reachability {
             switch reachability.connection {

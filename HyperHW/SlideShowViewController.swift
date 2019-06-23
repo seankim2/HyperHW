@@ -6,36 +6,49 @@
 //  Copyright © 2019 khkim2. All rights reserved.
 //
 
+/********************************************************************
+ Declare import framework
+ ********************************************************************/
 import Foundation
 import UIKit
 import Alamofire
 import SDWebImage
 
+/********************************************************************
+ Declare Class
+ ********************************************************************/
 class SlideShowViewController: UIViewController {
 
-    // Variables
-    var canGetImage: Bool = true            // whether new images gets
+    /********************************************************************
+     Variables
+     ********************************************************************/
+    var canGetImage: Bool = true           // whether new images gets
     var isDrawImage: Bool = false          // flickrImgArr has no data
     var count: Int = 0                     // flickrImgArr Number
     var index: Int = 0                     // flickrImgArr index
     let showTime: Double = 2.0
     let hideTime: Double = 2.0
     var stopDrawImg: Bool = false
+    var flickrImgArr: [String] = []        // Image Array of Flickr
+    let serverURL = "https://api.flickr.com/services/feeds/photos_public.gne?tags=landscape,portrait&tagmode=any&format=json&nojsoncallback=1"
     
-    // Indicator
+    /********************************************************************
+     About Indicator
+     ********************************************************************/
     var actInd: UIActivityIndicatorView = UIActivityIndicatorView()
     let loadingContainer: UIView = UIView()
-
-    var flickrImgArr: [String] = []        // Image Array of Flickr
     
-    let serverURL = "https://api.flickr.com/services/feeds/photos_public.gne?tags=landscape,portrait&tagmode=any&format=json&nojsoncallback=1"
-
-    // IBOutlet Objects
+    /********************************************************************
+     IBOutlet Objects
+     ********************************************************************/
     @IBOutlet weak var flickrIV: UIImageView!
     @IBOutlet weak var timePeriodSldr: UISlider!
     @IBOutlet weak var timePeriodLbl: UILabel!
     @IBOutlet weak var backBtn: UIButton!
 
+    /********************************************************************
+     ViewController life cycle
+     ********************************************************************/
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,7 +86,20 @@ class SlideShowViewController: UIViewController {
                                                   object: nil)
     }
     
-    // About Rotate
+    /********************************************************************
+     IBAction Process
+     ********************************************************************/
+    @IBAction func processTimePeriodSlider(_ sender: Any) {
+        self.drawTimePeriod(value: self.timePeriodSldr.value)
+    }
+    
+    @IBAction func processBackBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    /********************************************************************
+     About Rotate
+     ********************************************************************/
     override var shouldAutorotate: Bool {
         return true
     }
@@ -97,24 +123,18 @@ class SlideShowViewController: UIViewController {
     
     func processUIOfLandscape() {
         print("[\(#function)]")
-//        backBtn.translatesAutoresizingMaskIntoConstraints = false
-//        backBtn.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: 5)
-//                .isActive = true
-//        backBtn.heightAnchor.constraint(equalToConstant: 30)
-//                .isActive = true
-
     }
     
     func processUIOfPortrait() {
         print("[\(#function)]")
-//        backBtn.translatesAutoresizingMaskIntoConstraints = false
-//        backBtn.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: 5)
-//            .isActive = false
-//        backBtn.heightAnchor.constraint(equalToConstant: 30)
-//            .isActive = false
-        
     }
     
+    /********************************************************************
+     * Name           : drawTimePeriod
+     * Description    : Draw time period
+     * Arguments      : value -> value for drawing lable, slider
+     * Returns        : Void
+     ********************************************************************/
     func drawTimePeriod(value: Float) {
         let curSecVal = Int(value)
         //print("\(#function) curSecVal : \(curSecVal)")
@@ -125,15 +145,12 @@ class SlideShowViewController: UIViewController {
         self.timePeriodSldr.value = value
     }
     
-    // IBAction Process
-    @IBAction func processTimePeriodSlider(_ sender: Any) {
-        self.drawTimePeriod(value: self.timePeriodSldr.value)
-    }
-   
-    @IBAction func processBackBtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+    /********************************************************************
+     * Name           : drawComponentsUI
+     * Description    : Draw components for UI
+     * Arguments      : Void
+     * Returns        : Void
+     ********************************************************************/
     func drawComponentsUI() {
         self.backBtn?.setTitleColor(CommonComponents.sharedInstance?.titleColor, for: .normal)
         self.backBtn?.backgroundColor = UIColor.white
@@ -142,6 +159,12 @@ class SlideShowViewController: UIViewController {
         self.backBtn?.layer.borderColor = UIColor.lightGray.cgColor
     }
     
+    /********************************************************************
+     * Name           : showFadeIn
+     * Description    : escaping closure function for drawing by fade-in
+     * Arguments      : Void
+     * Returns        : Void
+     ********************************************************************/
     func showFadeIn() {
         UIView.animate(withDuration: showTime, animations: {() -> Void in
             self.flickrIV.alpha = 1.0
@@ -150,7 +173,13 @@ class SlideShowViewController: UIViewController {
             print("\(#function) Draw Image Completed")
         })
     }
-    
+
+    /********************************************************************
+     * Name           : hideFadeOut
+     * Description    : escaping closure function for hiding by fade-out
+     * Arguments      : Void
+     * Returns        : Void
+     ********************************************************************/
     func hideFadeOut() {
         UIView.animate(withDuration: hideTime, animations: {() -> Void in
             print("\(#function) FadeOut Index :  \(self.index)")
@@ -161,8 +190,14 @@ class SlideShowViewController: UIViewController {
             print("\(#function) Hide Image Completed")
         })
     }
-    
-    func showActivityIndicatory(uiView: UIView) {
+
+    /********************************************************************
+     * Name           : showActivityIndicator
+     * Description    : show indicator with container
+     * Arguments      : uiView -> UIView for drwing loading acivity indicator
+     * Returns        : Void
+     ********************************************************************/
+    func showActivityIndicator(uiView: UIView) {
         DispatchQueue.main.async {
             self.loadingContainer.frame = uiView.frame
             self.loadingContainer.center = uiView.center
@@ -183,45 +218,34 @@ class SlideShowViewController: UIViewController {
             loadingView.addSubview(self.actInd)
             self.loadingContainer.addSubview(loadingView)
             uiView.addSubview(self.loadingContainer)
-            
-            #if false
-            self.loadingContainer.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint(
-                item: self.loadingContainer,
-                attribute: .centerX,
-                relatedBy: .equal,
-                toItem: uiView,
-                attribute: .centerX,
-                multiplier: 1.0,
-                constant: 0.0
-                ).isActive = true
-            NSLayoutConstraint(
-                item: self.loadingContainer,
-                attribute: .centerY,
-                relatedBy: .equal,
-                toItem: uiView,
-                attribute: .centerY,
-                multiplier: 1.0,
-                constant: 0.0
-                ).isActive = true
-            NSLayoutConstraint(item: self.loadingContainer, attribute: .width, relatedBy: .equal, toItem: uiView, attribute: .width, multiplier: 1, constant: 0).isActive = true
-            NSLayoutConstraint(item: self.loadingContainer, attribute: .height, relatedBy: .equal, toItem: uiView, attribute: .height, multiplier: 1, constant: 0).isActive = true
-            #endif
-            
+                        
             self.actInd.startAnimating()
         }
     }
     
-    func dissmissActivityIndicatory(actInd: UIActivityIndicatorView) {
+    /********************************************************************
+     * Name           : dissmissActivityIndicator
+     * Description    : hide Activity Indicator
+     * Arguments      : actInd -> UIActivityIndicatorView for stoping animating
+     * Returns        : Void
+     ********************************************************************/
+    func dissmissActivityIndicator(actInd: UIActivityIndicatorView) {
         DispatchQueue.main.async {
             actInd.stopAnimating()
             self.loadingContainer.removeFromSuperview()
         }
     }
     
+    /********************************************************************
+     * Name           : drawFlickrImages
+     * Description    : draw flickr images by periodic time
+     * Arguments      : showFunc -> escaping closure for drawing image
+                        hideFunc -> escaping closure for hiding image
+     * Returns        : Void
+     ********************************************************************/
     func drawFlickrImages(showFunc: @escaping () -> Void, hideFunc: @escaping () -> Void) {
         var timerInvalidate: Bool = false
-        self.showActivityIndicatory(uiView: self.view)
+        self.showActivityIndicator(uiView: self.view)
         
         DispatchQueue.global(qos: .default).async(execute: {() -> Void in
             //CommonComponents.sharedInstance?.displayActivityIndicatorAlert()
@@ -257,7 +281,7 @@ class SlideShowViewController: UIViewController {
                 
                 hideFunc()
                 
-                self.dissmissActivityIndicatory(actInd: self.actInd)
+                self.dissmissActivityIndicator(actInd: self.actInd)
                 
                 //print("\(#function) stopDrawImg : \(self.stopDrawImg)")
                 if self.stopDrawImg == true {
@@ -267,6 +291,12 @@ class SlideShowViewController: UIViewController {
         })
     }
     
+    /********************************************************************
+     * Name           : refreshFlickrImage
+     * Description    : refresh flikr images array
+     * Arguments      : Void
+     * Returns        : Void
+     ********************************************************************/
     func refreshFlickrImage() {
         if canGetImage == true {
             Alamofire.request(serverURL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON {
@@ -314,9 +344,6 @@ class SlideShowViewController: UIViewController {
         }
     }
     
-    //---------------------------//
-    // didReceiveMemoryWarning
-    //---------------------------//
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

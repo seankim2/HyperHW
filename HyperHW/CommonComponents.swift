@@ -6,9 +6,15 @@
 //  Copyright © 2019 khkim2. All rights reserved.
 //
 
+/********************************************************************
+ Declare import framework
+ ********************************************************************/
 import Foundation
 import UIKit
 
+/********************************************************************
+ UIColor extention
+ ********************************************************************/
 extension UIColor {
     class func colorWithRGBHex(hex: Int, alpha: Float = 1.0) -> UIColor {
         let red = Float((hex >> 16) & 0xFF)
@@ -19,6 +25,9 @@ extension UIColor {
     }
 }
 
+/********************************************************************
+ Declare Class
+ ********************************************************************/
 class CommonComponents {
     var activityIndicatorAlert: UIAlertController?
     var popupAlertController: UIAlertController?
@@ -31,6 +40,12 @@ class CommonComponents {
         CommonComponents.sharedInstance = self
     }
 
+    /********************************************************************
+     * Name           : processPopup
+     * Description    : process popup alert controller
+     * Arguments      : title, message for alert contents
+     * Returns        : Void
+     ********************************************************************/
     func processPopup(title: String, message: String) {
         DispatchQueue.main.async(execute: {
             if self.popupAlertController == nil {

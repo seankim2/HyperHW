@@ -6,8 +6,14 @@
 //  Copyright © 2019 khkim2. All rights reserved.
 //
 
+/********************************************************************
+ Declare import framework
+ ********************************************************************/
 import UIKit
 
+/********************************************************************
+ UIDevice extention
+ ********************************************************************/
 extension UIDevice {
     var hasNotch: Bool {
         var bottom = 0
@@ -20,14 +26,22 @@ extension UIDevice {
     }
 }
 
+/********************************************************************
+ Declare Class
+ ********************************************************************/
 class ViewController: UIViewController {
     
-    // IBOutlet Objects
+    /********************************************************************
+     IBOutlet Objects
+     ********************************************************************/
     @IBOutlet weak var slideLbl: UILabel!
     @IBOutlet weak var timePeriodSldr: UISlider!
     @IBOutlet weak var timePeriodLbl: UILabel!
     @IBOutlet weak var startBtn: UIButton!
     
+    /********************************************************************
+     ViewController life cycle
+     ********************************************************************/
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -46,7 +60,9 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    // About Rotate
+    /********************************************************************
+     About Rotate
+     ********************************************************************/
     override var shouldAutorotate: Bool {
         return true
     }
@@ -59,6 +75,12 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "openSlideShowVC", sender: nil)
     }
     
+    /********************************************************************
+     * Name           : drawComponentsUI
+     * Description    : Draw components for UI
+     * Arguments      : Void
+     * Returns        : Void
+     ********************************************************************/
     func drawComponentsUI() {
         self.slideLbl.textColor = CommonComponents.sharedInstance?.titleColor
         
@@ -69,6 +91,12 @@ class ViewController: UIViewController {
         self.startBtn?.layer.borderColor = UIColor.lightGray.cgColor
     }
     
+    /********************************************************************
+     * Name           : drawTimePeriod
+     * Description    : Draw time period
+     * Arguments      : value -> value for drawing lable, slider
+     * Returns        : Void
+     ********************************************************************/
     func drawTimePeriod(value: Float) {
         let curSecVal = Int(value)
         //print("\(#function) curSecVal : \(curSecVal)")
@@ -79,7 +107,9 @@ class ViewController: UIViewController {
         self.timePeriodSldr.value = value
     }
     
-    // IBAction Process
+    /********************************************************************
+     IBAction Process
+     ********************************************************************/
     @IBAction func processTimePeriodSlider(_ sender: Any) {
         self.drawTimePeriod(value: self.timePeriodSldr.value)
     }
@@ -88,9 +118,6 @@ class ViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "openSlideShowVC"), object: nil)
     }
 
-    //---------------------------//
-    // didReceiveMemoryWarning
-    //---------------------------//
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
